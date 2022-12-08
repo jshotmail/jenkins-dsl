@@ -13,7 +13,7 @@ void createPipeline(it) {
     def desc = it.description
     pipelineJob(jobname) {
         parameters {
-            choiceParam('Happy', ['Yes (default)', 'Sure', 'option 3'], 'Of course')
+            choiceParam('Gender', ['Female (default)', 'Male', 'Not sure'])
         }
         
         description(desc)
