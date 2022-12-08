@@ -12,6 +12,10 @@ void createPipeline(it) {
     def gitrepo = it.gitrepo
     def desc = it.description
     pipelineJob(jobname) {
+        parameters {
+            choiceParam('Happy', ['Yes (default)', 'Sure', 'option 3'], 'Of course')
+        }
+        
         description(desc)
 
         definition {
